@@ -1,13 +1,14 @@
 {
+	"icon": "icon.png",
   "name": "show-symlink-source",
 	"displayName": "Show Symlink Source",
 	"description": "Show the source of editing symlink file in vscode.",
-	"publisher": "IvanNemytchenko",
+	"publisher": "nemytchenko",
 	"repository": {
     "type": "git",
     "url": "https://github.com/inem/vscode-show-symlink-source"
   },
-	"version": "0.1.7",
+	"version": "1.0.2",
 	"engines": {
 		"vscode": "^1.52.0"
 	},
