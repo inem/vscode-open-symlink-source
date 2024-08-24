@@ -1,13 +1,13 @@
 {
-  "name": "open-symlink-source",
-	"displayName": "Open Symlink Source",
-	"description": "Open the source of editing symlink file in vscode.",
-	"publisher": "AlanZhang",
+  "name": "show-symlink-source",
+	"displayName": "Show Symlink Source",
+	"description": "Show the source of editing symlink file in vscode.",
+	"publisher": "IvanNemytchenko",
 	"repository": {
     "type": "git",
-    "url": "https://github.com/zcfan/vscode-open-symlink-source"
+    "url": "https://github.com/inem/vscode-show-symlink-source"
   },
-	"version": "0.0.1",
+	"version": "0.1.7",
 	"engines": {
 		"vscode": "^1.52.0"
 	},
@@ -15,21 +15,22 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:open-symlink-source.openSymlinkSource"
+		"onStartupFinished",
+		"onFileSystem:file"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "open-symlink-source.openSymlinkSource",
-				"title": "Open Symlink Source"
+				"command": "show-symlink-source.showSymlinkSource",
+				"title": "Show Symlink Source"
 			}
 		]
 	},
 	"scripts": {
 		"vscode:prepublish": "yarn run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
+		"compile": "npx tsc -p ./",
+		"watch": "yarn run tsc -watch -p ./",
 		"pretest": "yarn run compile && yarn run lint",
 		"lint": "eslint src --ext ts",
 		"test": "node ./out/test/runTest.js"
